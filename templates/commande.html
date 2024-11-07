@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+</head>
+<body>
+    <h1>Place an Order</h1>
+    <form method="POST" action="/place_order">
+        {{ form.hidden_tag() }}
+        <div>
+            <label for="client_id">Client ID:</label>
+            {{ form.client_id(size=32) }}
+        </div>
+        <div>
+            <label for="product_id">Product ID:</label>
+            {{ form.product_id(size=32) }}
+        </div>
+        <div>
+            <label for="qte">Quantity:</label>
+            {{ form.qte(size=32) }}
+        </div>
+        <div>
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</body>
+</html>
